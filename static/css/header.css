@@ -1,0 +1,53 @@
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 30px;
+  box-sizing: border-box;
+}
+
+.header__logo {
+  height: 70px;
+  margin: 0 25px 0 0;
+}
+
+.header__slogan {
+  flex: 1 1 auto;
+  color: var(--orange-color);
+}
+
+.header__app-name {
+  color: var(--orange-color);
+  margin: 0 0 5px 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.header__app-description {
+  font-size: 26px;
+}
+
+.header__links {
+  width: 60%;
+  display: flex;
+}
+
+.header__link {
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 22px;
+  line-height: 50px;
+  color: var(--text-color);
+  border-right: 1px solid #ddd;
+  transition: color .1s ease;
+}
+
+.header__link:hover {
+  color: var(--orange-color);
+  text-decoration: underline;
+}
+
+.header__link:last-child {
+  border-right: none;
+}

@@ -1,0 +1,15 @@
+.title {
+    font-family: "PT+Serif", sans-serif;
+    font-weight: 700;
+    color: #333333;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+}

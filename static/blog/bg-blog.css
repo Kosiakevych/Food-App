@@ -1,0 +1,105 @@
+.main__wrapper {
+    width: 1400px;
+    margin: 0 auto;
+}
+/* .personal-data {
+    margin: 50px 0 0 0;
+    padding: 0px 40px 0 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.personal-data-text-container {
+    display: block;
+    width: 400px;
+}
+.personal-role {
+    margin: 10px 0 0 0;
+    font-size: 20px;
+}
+.personal-name {
+    margin: 8px 0 0 0;
+    font-size: 36px;
+}
+.personal-information {
+    margin: 8px 0 0 0;
+    font-size: 16px;
+}
+.personal-contribution {
+    margin: 24px 0 0 0;
+    font-size: 20px;
+    display: inline-block;
+}
+.personal-contribution ::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin: 0 4px 0 0;
+    background: url(/static/img/star_blue_24.png) 0 0/100% auto no-repeat;
+    display: inline-block;
+}
+.personal-friends {
+    margin: 12px 0 0 0;
+    font-size: 20px;
+}
+.personal-friends ::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin: 0 4px 0 0;
+    background: url(/static/img/star_yellow_24.png) 0 0/100% auto no-repeat;
+    display: inline-block;
+}
+.personal-email {
+    margin: 12px 0 0 0;
+    font-size: 20px;
+}
+.personal-email ::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin: 0 4px 0 0;
+    background: url(/static/img/mail.png) 0 0/100% auto no-repeat;
+    display: inline-block;
+}
+
+.personal-visiting {
+    margin: 12px 0 0 0;
+    font-size: 20px;
+}
+
+.personal-visiting ::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin: 0 4px 0 0;
+    background: url(/static/img/blog.png) 0 0/100% auto no-repeat;
+    display: inline-block;
+}
+
+.personal-settings {
+    margin: 12px 0 0 0;
+    font-size: 20px;
+}
+
+.personal-settings ::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin: 0 4px 0 0;
+    background: url(/static/img/settings.png) 0 0/100% auto no-repeat;
+    display: inline-block;
+}
+
+
+.personal-data-image-wrapper {
+    width: 400px;
+    height: 400px;
+}
+.dish__image {
+    width: 100%;
+    height: 100%;
+    background: url('/static/img/no-title.jpg') 0 0/100% auto no-repeat;
+} */
+
+

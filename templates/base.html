@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+    <link rel="stylesheet" href="/static/css/standard.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+{% endblock head %}
+<body>
+{% include "include/header.html" %}
+
+{% block content %}
+
+{% endblock content %}
+{% include "include/footer.html" %}
+<script src="{% static 'dishes_list/js/main.js' %}"></script>
+<script src="{% static 'dishes_list/js/filters.js' %}"></script>
+<script src="{% static 'dishes_list/js/ingredients.js' %}"></script>
+<script src="{% static 'dishes_list/js/dishes.js' %}"></script>
+<script src="{% static 'js/request.js' %}"></script>
+<script src="{% static "dish/js/dish.js" %}"></script>
+</body>
+</html>

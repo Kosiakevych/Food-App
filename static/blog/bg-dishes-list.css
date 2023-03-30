@@ -1,0 +1,47 @@
+h1, h2 {
+	font-size: 32px;
+	font-weight: 700;
+}
+
+
+.quick-dishes {
+	margin: 50px 0 100px;
+}
+
+.quick-dishes__list {
+	padding: 30px 0;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+}
+
+.quick-dishes__list .dish {
+	margin: 0 50px 0 0;
+}
+
+
+.dishes h2 {
+	margin: 0 0 30px 0;
+}
+
+.dishes__content {
+	display: flex;
+}
+
+.dishes__filters {
+	flex: 1 0 33%;
+	margin: 0 20px 0 0;
+	align-self: flex-start;
+	position: sticky;
+	top: 20px;
+}
+
+.dishes__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.dishes__list .dish {
+	margin: 0 0 30px 20px;
+}

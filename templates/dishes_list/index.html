@@ -1,0 +1,104 @@
+{% extends "connect.html" %}
+{% load static %}
+
+{% block head %}
+    <head>
+        <meta charset="UTF-8">
+        <title>Dishes</title>
+        <link rel="stylesheet" href={% static "css/reset.css" %}>
+        <link rel="stylesheet" href={% static "css/header.css" %}>
+        <link rel="stylesheet" href={% static "css/dish.css" %}>
+        <link rel="stylesheet" href={% static "dishes_list/css/dl-filters.css" %}>
+        <link rel="stylesheet" href={% static "dishes_list/css/dl-dishes_list.css" %}>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+                href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap"
+                rel="stylesheet">
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    </head>
+{% endblock head %}
+
+{% block content %}
+    <main>
+        <section class="quick-dishes">
+            <h2>Quick recipes</h2>
+            {% comment %} перетворити в ul {% endcomment %}
+            <div class="quick-dishes__list">
+                {% comment %} перетворити в li {% endcomment %}
+                <div class="dishes__dish dish">
+                    <div class="dish__image-wrapper">
+                        <div class="dish__image"
+                             style="background-image: url({% static 'img/logo.png' %})"></div>
+                    </div>
+                    <div class="dish__text">
+                        <a class="dish__name" href="#">dish.name</a>
+                        <a class="dish__category" href="#">
+                            dish.category
+                        </a>
+                        <a class="dish__cuisine" href="#">
+                            dish.cuisine
+                        </a>
+                    </div>
+                    <div class="dish__stars">
+                        <div class="dish__star"></div>
+                        <div class="dish__star"></div>
+                        <div class="dish__star"></div>
+                        <div class="dish__star"></div>
+                        <div class="dish__star"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="dishes">
+            <h2>Our delicious Recipes</h2>
+            <section class="dishes__content">
+                <section class="dishes__filters filters">
+                    <label class="filters__search">
+                        <input
+                                class="filters__search-input"
+                                type="text"
+                                placeholder="Search..."
+                        />
+                    </label>
+                    <section class="filters__section section">
+                        <section class="section__top">
+                            <div class="section__name">Ingredients</div>
+                            <button class="section__toggle"></button>
+                        </section>
+                        <div class="ingredients">
+                            <div class="ingredients__groups"></div>
+                            <div class="ingredients__selected-group">
+                                <button class="ingredients__back">All ingredients</button>
+                                <div class="section__options ingredients__list"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="filters__section section">
+                        <div class="section__top">
+                            <div class="section__name">Instruments</div>
+                            <button class="section__toggle"></button>
+                        </div>
+                        <div class="section__options equipment-list"></div>
+                    </section>
+                    <button type="submit">Найти</button>
+                </section>
+                <div class="dishes__list-wrapper">
+                    <div class="dishes__list"></div>
+                    <div class="dishes__observer"></div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <div class="modal-container">
+                <button type="button " data-modal-close class="modal-button">
+                    <svg class="modal-icon">
+                        <use href="./images/icons.svg#icon-close-black"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

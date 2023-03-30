@@ -1,0 +1,172 @@
+{% extends "connect.html" %}
+{% load static %}
+
+{% block head %}
+    <head>
+        <meta charset="UTF-8">
+        <title>Dishes</title>
+        <link rel="stylesheet" href={% static "css/reset.css" %}>
+        <link rel="stylesheet" href={% static "css/header.css" %}>
+        <link rel="stylesheet" href={% static "css/dish.css" %}>
+
+        <link rel="stylesheet" href={% static "blog/bg-blog.css" %}>
+        <link rel="stylesheet" href={% static "blog/bg-personal.css" %}>
+        <link rel="stylesheet" href={% static "blog/bg-dishes-list.css" %}>
+
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+                href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap"
+                rel="stylesheet">
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    </head>
+{% endblock head %}
+{% block content %}
+    <main>
+        <div class="main__wrapper">
+            <div class="forms" style="font-size: 25px">
+                <form method="post" action="{% url 'register' %}" enctype="multipart/form-data" class="register-form">
+                    {% csrf_token %}
+                    <p>Register</p>
+                    <input type="text" style="line-height: 40px; font-size: 25px; margin-bottom: 10px;"
+                           placeholder="Username" name="username"><br>
+                    <input type="text" style="line-height: 40px; font-size: 25px; margin-bottom: 10px;"
+                           placeholder="First name" name="first_name"><br>
+                    <input type="text" style="line-height: 40px; font-size: 25px; margin-bottom: 10px;"
+                           placeholder="Last name" name="last_name"><br>
+                    <input type="email" style="line-height: 40px; font-size: 25px; margin-bottom: 10px;"
+                           placeholder="Email"
+                           name="email"><br>
+                    <input type="password" style="line-height: 40px; font-size: 25px; margin-bottom: 10px;"
+                           placeholder="Password" name="password"><br>
+
+                    <button type="submit" style="font-size: 25px">Register</button>
+                </form>
+                <br><br><br>
+                <form method="post" action="/auth/token/login/" class="login-form">
+                    {% csrf_token %}
+                    <p>Login</p>
+                    <input type="text" name="username" style="line-height: 40px; font-size: 25px; margin-bottom: 10px;"
+                           placeholder="Username"><br>
+                    <input type="password" name="password"
+                           style="line-height: 40px; font-size: 25px; margin-bottom: 10px;"
+                           placeholder="password"><br>
+                    <button type="submit" style="font-size: 25px">Login</button>
+                </form>
+
+            </div>
+            <div class="personal">
+                <div class="personal-text-container">
+                    <div class="personal-role"><p>кухар початківець</p></div>
+                    <div class="personal-name"><p>Pavlo00600</p></div>
+                    <div class="personal-information"><p>Павло Савюк, Украина, Коломия</p></div>
+                    <div class="personal-contribution"><p>Вклад: 0</p></div>
+                    <div class="personal-friends"><p>В друзьях: 7</p></div>
+                    <div class="personal-email"><p>savyukpavlo8@gmail.com</p></div>
+                    <div class="personal-visiting"><p>Последнее посещение: сейчас на сайте</p></div>
+                    <div class="personal-settings"><p>Изменить настройки</p></div>
+                </div>
+                <div class="personal-data-image-wrapper">
+                    <div
+                            class="dish__image"
+                            style="background-image: url('/static/img/no-title.jpg');"
+                    ></div>
+                </div>
+            </div>
+            <div class="quick-dishes">
+                <h2>Favorite dishes</h2>
+                <div class="quick-dishes__list">
+                    {% for dish in list_of_dish_list %}
+                        <div class="dishes__dish dish">
+                            <div class="dish__image-wrapper">
+                                <div class="dish__image"
+                                     style="background-image: url('{{ dish.image }}')"></div>
+                            </div>
+                            <div class="dish__text">
+                                <a class="dish__name" href="{{ dish.url }}">{{ dish.name }}</a>
+                                <a class="dish__category" href="#">
+                                    {{ dish.category }}
+                                </a>
+                                <a class="dish__cuisine" href="#">
+                                    {{ dish.cuisine }}
+                                </a>
+                            </div>
+                            <div class="dish__stars">
+                                <div class="dish__star"></div>
+                                <div class="dish__star"></div>
+                                <div class="dish__star"></div>
+                                <div class="dish__star"></div>
+                                <div class="dish__star"></div>
+                            </div>
+                            <div class="dish__parameters">
+                                <div class="parameter">
+                                    <div class="parameter__icon parameter__icon-ingredients"></div>
+                                    <div class="parameter__value">11</div>
+                                </div>
+                                <div class="parameter">
+                                    <div class="parameter__icon parameter__icon-portions"></div>
+                                    <div class="parameter__value">4</div>
+                                </div>
+                                <div class="parameter">
+                                    <div class="parameter__icon parameter__icon-time"></div>
+                                    <div class="parameter__value">40 m</div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="dishes">
+                <h2>Your Recipes</h2>
+                <div class="dishes__content">
+                    <div class="dishes__list">
+                        {% for dish in list_of_dish_list %}
+                            <div class="dishes__dish dish">
+                                <div class="dish__image-wrapper">
+                                    <div class="dish__image"
+                                         style="background-image: url('{{ dish.image }}')"></div>
+                                </div>
+                                <div class="dish__text">
+                                    <a class="dish__name" href="{{ dish.url }}#">{{ dish.name }}</a>
+                                    <a class="dish__category" href="#">
+                                        {{ dish.category }}
+                                    </a>
+                                    <a class="dish__cuisine" href="#">
+                                        {{ dish.cuisine }}
+                                    </a>
+                                </div>
+                                <div class="dish__stars">
+                                    <div class="dish__star"></div>
+                                    <div class="dish__star"></div>
+                                    <div class="dish__star"></div>
+                                    <div class="dish__star"></div>
+                                    <div class="dish__star"></div>
+                                </div>
+                                <div class="dish__parameters">
+                                    <div class="parameter">
+                                        <div class="parameter__icon parameter__icon-ingredients"></div>
+                                        <div class="parameter__value">{{ dish.ingredient.all.count }}</div>
+                                    </div>
+                                    <div class="parameter">
+                                        <div class="parameter__icon parameter__icon-portions"></div>
+                                        {% for portion in dish.ingredient.all %}
+                                            {% if forloop.first %}
+                                                <div class="parameter__value">{{ portion.default_quant }}</div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="parameter">
+                                        <div class="parameter__icon parameter__icon-time"></div>
+                                        <div class="parameter__value">{{ dish.time }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

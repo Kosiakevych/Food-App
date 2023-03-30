@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Profile page</title>
+    <link rel="stylesheet" href="../../frontend/src/styles/reset.css"/>
+    <link rel="stylesheet" href="../../static/profile/profile.css"/>
+</head>
+<body>
+<header></header>
+<main>
+    <form action="/api/profile/" method="post" enctype="multipart/form-data">
+        <section class="section-input">
+            <p>first name</p>
+            <input type="text" name="first-name" id="first-name" class="name"/>
+        </section>
+        <section class="section-input">
+            <p>second name</p>
+            <input type="text" name="second-name" id="second-name" class="name"/>
+        </section>
+        <section class="section-input">
+            <p>description</p>
+            <textarea
+                    type="text"
+                    name="description"
+                    id="description"
+                    class="description"
+            ></textarea>
+        </section>
+        <section class="section-input">
+            <p>foto</p>
+            <input type="file" name="foto" id="foto" class="foto"/>
+        </section>
+        <button type="submit">Сохранить</button>
+    </form>
+</main>
+</body>
+</html>

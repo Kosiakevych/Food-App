@@ -1,0 +1,146 @@
+.filters__search-input {
+  width: 100%;
+  padding: 15px;
+  font: 18px Roboto, sans-serif;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+
+.filters__section {
+  margin: 15px 0 0;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.section__top {
+  margin: 0 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section__name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.section__toggle {
+  width: 25px;
+  height: 25px;
+  background-image: url("/static/dishes_list/icons/arrow.png");
+  background-size: 80% 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section__options {
+  margin: 0 0 0 -5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section__options input[type=checkbox] {
+  display: none;
+}
+
+.section__options label {
+  margin: 5px;
+  padding: 5px 15px;
+  font-size: 15px;
+  background-color: #ddd;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color .1s ease;
+}
+
+.section__options input[type=checkbox]:checked + label {
+  background-color: var(--orange-color);
+}
+
+
+.ingredients {
+  display: flex;
+  overflow: hidden;
+}
+
+
+.ingredients__groups {
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 0;
+  transition: margin-left .3s ease;
+}
+
+.ingredients__groups-closed {
+  margin-left: -100%;
+}
+
+.ingredients__group {
+  display: block;
+  margin: 0 30px 30px 0;
+}
+
+.ingredients__group-name {
+  font-size: 20px;
+  color: #448;
+  text-decoration: underline;
+}
+
+.ingredients__group-dishes {
+  font-size: 14px;
+  color: #777;
+}
+
+
+.ingredients__selected-group {
+  flex-shrink: 0;
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredients__back {
+  margin: 0 0 10px;
+  display: flex;
+  font-size: 18px;
+  line-height: 34px;
+  transition: color .1s ease;
+}
+
+.ingredients__back:hover {
+  color: #55a;
+}
+
+.ingredients__back:before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 8px 0 0;
+  background-image: url('/static/img/back.png');
+  background-size: cover;
+}
+
+.ingredients__list {
+  overflow: auto;
+}
+
+.ingredients__list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.ingredients__list::-webkit-scrollbar-thumb {
+  min-height: 30px;
+  border-radius: 5px;
+  background-color: #ddd;
+  transition: background-color 1s ease;
+}
+
+.ingredients__list:hover::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+}

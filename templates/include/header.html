@@ -1,0 +1,19 @@
+{% load static %}
+
+<header class="header">
+    <a href="/"><img class="header__logo" src="{% static "img/logo.png" %}" alt=""></a>
+    <nav class="header__slogan">
+        {% comment %} треба поміняти колір FOod App {% endcomment %}
+        <a href=/ class="header__app-name">Food App</a>
+        <p class="header__app-description">Your best cooking advisor</p>
+    </nav>
+    <nav class="header__links">
+        {% comment %} всі елементи з одинакомим смислом і дизайном мають бути обгорнені в ul>li* {% endcomment %}
+        {% comment %} треба обєднати li>ul* {% endcomment %}
+        <a href=/ class="header__link">Home</a>
+        <a href="#" class="header__link">Recipes</a>
+        <a href="/swagger/" class="header__link">Documentation</a>
+        <a href="#" class="header__link">Shops</a>
+        <a href="blog/" class="header__link">Blog</a>
+    </nav>
+</header>

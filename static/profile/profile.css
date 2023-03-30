@@ -1,0 +1,22 @@
+.section-input {
+    margin: 16px 0 16px 8px;
+}
+
+.section-input>p {
+    margin: 0 0 8px 0;
+}
+
+.name {
+    border: 1px solid #000000;
+    display: block;
+    min-height: 18px;
+}
+
+.description {
+    border: 1px solid #000000;
+    display: block;
+    min-height: 120px;
+    width: 180px;
+}
+
+.foto {}

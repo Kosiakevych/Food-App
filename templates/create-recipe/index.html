@@ -1,0 +1,138 @@
+{% extends "connect.html" %}
+{% load static %}
+
+{% block head %}
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Dishes</title>
+
+        <link rel="stylesheet" href={% static "css/reset.css" %}>
+        <link rel="stylesheet" href={% static "css/header.css" %}>
+        <link rel="stylesheet" href={% static "css/standard.css" %}>
+        <link rel="stylesheet" href={% static "css/footer.css" %}>
+
+        <link rel="stylesheet" href={% static "create-recipe/css/create-recipe.css" %}>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+                href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap"
+                rel="stylesheet"
+        >
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    </head>
+{% endblock head %}
+{% block content %}
+
+    <main class="recipe-main">
+        <form action="#" method="post" enctype="multipart/form-data"></form>
+        <section>
+            <section class="container-margin">
+                <h1 class="title">Your new recipe:</h1>
+                <input type="text" placeholder="Recipe name" name="name-recipe" class="name-recipe"/>
+            </section>
+
+            <div class="container-flex container-margin">
+                <section class="container-portion">
+                    <h3 class="title">Number of servings:</h3>
+                    <input type="tel" name="portion" class="portion"/>
+                </section>
+                <section class="container-time">
+                    <h3 class="title">Cooking time:</h3>
+                    <div class="container-flex">
+                        <input type="tel" name="portion" class="time"/>
+                        <p>hour(s)</p>
+                        <input type="tel" name="portion" class="time"/>
+                        <p>minute(s)</p>
+                    </div>
+                </section>
+            </div>
+
+            <section class="container-margin">
+                <h3 class="title">Photo of the finished dish:</h3>
+                <input type="file" name="foto" class="foto"/>
+            </section>
+
+            <div class="container-flex container-margin">
+                <section>
+                    <h3 class="title">Dish category:</h3>
+                    <select name="category" class="category">
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                    </select>
+                </section>
+                <section>
+                    <h3 class="title">Cuisine:</h3>
+                    <select name="nationality" class="category">
+                        <option value="ru">Russian</option>
+                        <option value="ua">Ukrainian</option>
+                        <option value="en">English</option>
+                    </select>
+                </section>
+            </div>
+        </section>
+        <section>
+            <h2 class="title big">Recipe Description</h2>
+            <p class="text">Tell us more about your recipe by adding a description</p>
+            <textarea name="description" placeholder="describe the dish" class="description"></textarea>
+        </section>
+        <section>
+            <h2 class="title big">Ingredients</h2>
+            <div class="standard-border">
+                <p class="text">Specify all the ingredients necessary for the preparation and serving of this dish</p>
+            </div>
+            <ul class="container-margin container-ingredients">
+                <li class="container-flex ingredients-flex">
+                    <input type="tel" name="ingredients-name" class="ingredients-name"/>
+                    <input type="tel" name="ingredients-value" class="ingredients-value"/>
+                    <select name="ingredients-category" class="ingredients-category">
+                        <option value="gram">g</option>
+                        <option value="kilogram">kg</option>
+                    </select>
+                </li>
+                <li class="container-flex ingredients-flex">
+                    <input type="tel" name="ingredients-name" class="ingredients-name"/>
+                    <input type="tel" name="ingredients-value" class="ingredients-value"/>
+                    <select name="ingredients-category" class="ingredients-category">
+                        <option value="gram">g</option>
+                        <option value="kilogram">kg</option>
+                    </select>
+                </li>
+            </ul>
+            <button type="button" class="ingredients-button">Add ingredients</button>
+        </section>
+        <section>
+            <h2 class="title big">Step-by-step instructions</h2>
+            <div class="standard-border">
+                <p class="text">Step-by-step instructions will help beginners cook your recipe</p>
+            </div>
+            <ul class="container-margin container-ingredients">
+                <li>
+                    <h4 class="title">STEP 1</h4>
+                    <input type="file" name="foto" class="foto"/>
+                    <textarea name="instruction" placeholder="describe the step" class="instruction"></textarea>
+                </li>
+                <li>
+                    <h4 class="title">STEP 2</h4>
+                    <input type="file" name="foto" class="foto"/>
+                    <textarea name="instruction" placeholder="describe the step" class="instruction"></textarea>
+                </li>
+            </ul>
+            <button type="button" class="ingredients-button">Add step</button>
+        </section>
+        <section>
+            <h2 class="title big">Recipe tip</h2>
+            <h3 class="title">NOTE</h3>
+            <textarea name="advice" placeholder="Describe the advice" class="advice"></textarea>
+        </section>
+        <section>
+            <div class="container-margin container-flex">
+                <button type="button" class="standard-button">Save</button>
+                <button type="reset" class="standard-button">Clear</button>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </section>
+        </form>
+    </main>
+{% endblock %}

@@ -1,0 +1,156 @@
+.dish {
+  width: 280px;
+  flex-shrink: 0;
+  background-color: white;
+  box-shadow: 0 4px 4px #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.dish__image-wrapper {
+  width: 100%;
+  height: 200px;
+  margin: 0 50px 0 0;
+
+  overflow: hidden;
+}
+
+.dish__image {
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 240px;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  transition: transform .2s ease;
+}
+
+.dish__bookmark {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.dish-img-button {
+  display: none;
+}
+
+.dish-img-icon {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+  stroke: #000;
+  transition: fill .1s ease;
+}
+
+.dish-img-button:checked+label .dish-img-icon {
+  fill: yellow;
+}
+
+.dish:hover .dish__image {
+  transform: scale(1.05);
+}
+
+
+.dish__text {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.dish__name {
+  min-height: 48px;
+
+  display: block;
+  margin: 10px 0;
+  max-height: 2.4em;
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 1.2em;
+  font-weight: 700;
+  color: var(--text-color);
+  transition: color .1s ease;
+}
+
+.dish__name:hover {
+  color: #755;
+  text-decoration: underline;
+}
+
+.dish__category,
+.dish__cuisine {
+  display: block;
+  font-size: 17px;
+  line-height: 22px;
+  color: var(--orange-color);
+}
+
+.dish__category:hover,
+.dish__cuisine:hover {
+  text-decoration: underline;
+}
+
+
+.dish__stars {
+  padding: 10px 20% 20px 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.dish__star {
+  width: 20px;
+  height: 20px;
+  background-image: url('/static/dishes_list/icons/star_filled.png');
+  background-size: contain;
+  background-position: center;
+}
+
+.dish__star:last-child {
+  background-image: url('/static/dishes_list/icons/star_empty.png');
+}
+
+
+.dish__parameters {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid var(--background-color);
+}
+
+.parameter {
+  flex: 1 1 100%;
+  padding: 13px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid var(--background-color);
+}
+
+.parameter:last-child {
+  border-right: none;
+}
+
+.parameter__icon {
+  margin: 0 0 4px 0;
+  height: 38px;
+  width: 38px;
+  background-size: contain;
+  background-position: center;
+}
+
+.parameter__icon-ingredients {
+  background-image: url('/static/dishes_list/icons/ingredients.png');
+}
+
+.parameter__icon-portions {
+  background-image: url('/static/dishes_list/icons/portion.png');
+}
+
+.parameter__icon-time {
+  background-image: url('/static/dishes_list/icons/time.png');
+}
+
+.parameter__value {
+  font-size: 18px;
+  color: #aaa;
+}

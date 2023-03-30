@@ -1,0 +1,62 @@
+{% extends "connect.html" %}
+{% load static %}
+
+{% block head %}
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ dish.name }}</title>
+        <link rel="stylesheet" href={% static "css/reset.css" %}>
+        <link rel="stylesheet" href={% static "css/header.css" %}>
+        <link rel="stylesheet" href={% static "dish/css/di-dish.css" %}>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+                href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap"
+                rel="stylesheet">
+    </head>
+{% endblock head %}
+{% block content %}
+    <main class="main">
+        <div class="main__wrapper">
+            <h1></h1>
+            <div class="top block">
+                <div class="top__photo"></div>
+                <div class="top__ingredients ingredients">
+                    <h2 class="ingredients__title">Ingredients</h2>
+                    <ul class="ingredients__list"></ul>
+                </div>
+            </div>
+            <div class="energy block">
+                <h2>energy value per serving</h2>
+                <div class="energy__values">
+                    <div class="energy__value">
+                        <div class="energy__value-name">calories</div>
+                        <div class="energy__quantity"></div>
+                        <div class="energy__units">kKl</div>
+                    </div>
+                    <div class="energy__value">
+                        <div class="energy__value-name">proteins</div>
+                        <div class="energy__quantity"></div>
+                        <div class="energy__units">grams</div>
+                    </div>
+                    <div class="energy__value">
+                        <div class="energy__value-name">fats</div>
+                        <div class="energy__quantity"></div>
+                        <div class="energy__units">grams</div>
+                    </div>
+                    <div class="energy__value">
+                        <div class="energy__value-name">carbohydrates</div>
+                        <div class="energy__quantity"></div>
+                        <div class="energy__units">grams</div>
+                    </div>
+                </div>
+            </div>
+            <div class="description block"></div>
+            <div class="instruction block">
+                <h2>Cooking instruction</h2>
+                <ul class="instruction__steps"></ul>
+            </div>
+        </div>
+    </main>
+{% endblock content %}
+

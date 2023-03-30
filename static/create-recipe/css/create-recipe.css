@@ -1,0 +1,191 @@
+main {
+    width: 850px;
+}
+
+.recipe-main {
+    margin: 40px 0 0 0;
+}
+
+.title {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.text {
+    margin-bottom: 16px;
+    color: #33333399;
+}
+
+.big {
+    text-transform: none;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.standard-border {
+    display: inline-block;
+    width: 400px;
+}
+
+.recipe-main>section {
+    margin: 0 40px 0 40px;
+    padding: 20px 60px 20px 60px;
+    text-align: center;
+    border-bottom: 1px solid #33333355;
+}
+
+.container-margin {
+    margin-bottom: 48px;
+}
+
+/* Section 1 */
+
+
+/* Name-recipe */
+
+.name-recipe {
+    background-color: var(--background-color);
+    width: 500px;
+    text-align: center;
+    font-size: 44px;
+    height: 80px;
+}
+
+/* Portion */
+
+.container-portion {
+    width: 44%;
+    text-align: left;
+}
+
+.portion {
+    text-align: center;
+    width: 60px;
+    height: 20px;
+    border: 1px solid #333333;
+}
+
+/* time */
+
+.container-time {
+    text-align: left;
+    width: 44%;
+    justify-content: space-between;
+}
+
+.time {
+    text-align: center;
+    border: 1px solid #333333;
+    width: 60px;
+    height: 20px;
+}
+
+/* Foto */
+
+.foto {
+    text-align: center;
+    width: 220px;
+}
+
+/* Category */
+
+.category {
+    border: 1px solid #333333;
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Section 2 */
+
+.description {
+    width: 600px;
+    height: 100px;
+    padding-left: 10px;
+    padding-top: 4px;
+    border: 1px solid #333333;
+    margin-bottom: 32px;
+}
+
+/* Section 3 */
+
+.container-ingredients {
+    background-color: var(--background-color);
+    width: 100%;
+}
+
+.ingredients-flex {
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.ingredients-name {
+    border: 1px solid #333333;
+    height: 30px;
+    padding-left: 10px;
+    width: 200px;
+}
+
+.ingredients-value {
+    border: 1px solid #333333;
+    text-align: center;
+    width: 60px;
+}
+
+.ingredients-category {
+    border: 1px solid #333333;
+}
+
+.ingredients-button {
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #333333;
+    margin-bottom: 24px;
+}
+
+/* Section 4 */
+
+.instruction {
+    display: block;
+    margin: 10px auto 28px auto;
+    width: 400px;
+    min-height: 50px;
+    padding-left: 10px;
+    padding-top: 4px;
+    border: 1px solid #333333;
+}
+
+/* Section 5 */
+
+.advice {
+    margin: 10px auto 28px auto;
+    width: 600px;
+    min-height: 150px;
+    padding-left: 10px;
+    padding-top: 4px;
+    border: 1px solid #333333;
+}
+
+/* Section 6 */
+
+.standard-button {
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #333333;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.submit-button {
+    text-align: center;
+    width: 400px;
+    height: 80px;
+    border: 1px solid #333333;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
